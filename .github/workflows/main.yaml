@@ -6,8 +6,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
-      - name: Setup python 
+      - uses: actions/checkout@v4
+      - name: Setup python
         uses: actions/setup-python@v5
       - name: Run script
         run: python main.py
