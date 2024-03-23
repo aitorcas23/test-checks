@@ -1,10 +1,8 @@
 import sys
-import os
+import subprocess
 
 if __name__ == "__main__":
-    file_name = os.path.basename(__file__)
-    print(f"::error file={file_name}::")
-
+    subprocess.call("echo 'cantimplora'", shell=True)
     raise ValueError("Error with value error")
     # print("Error message mereketengue")
     # sys.exit(1)
