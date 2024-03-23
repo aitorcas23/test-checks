@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Track changes
+        id: changed-files
         uses: tj-actions/changed-files@v43
       - name: Print changes
         env:
