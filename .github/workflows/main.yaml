@@ -16,5 +16,7 @@ jobs:
         run: python main.py
         # continue-on-error: true
       - name: Post error step
-        run: echo "Post error message"
+        run: |
+          text="This is an Error"
+          echo "::error::Post error message"
         if: failure()
