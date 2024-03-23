@@ -8,17 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 2
       - name: Track changes
         id: changed-files
         uses: tj-actions/changed-files@v43
         with:
-          since_last_remote_commit: true
+          base_sha: master
           files: |
-            docker-compose.yml
-            docker-compose.yaml
+            **/docker-compose.yml
+            **/docker-compose.yaml
       - name: Print changes
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
