@@ -14,7 +14,6 @@ jobs:
           python-version: "3.11"
       - name: Run script
         run: python main.py
-        # continue-on-error: true
-      - name: Post error step
-        run: echo "::error file=main.py::Post error message"
-        if: failure()
+      # - name: Post error step
+      #   run: echo "::error file=main.py::Post error message"
+      #   if: failure()
