@@ -11,6 +11,11 @@ jobs:
       - name: Track changes
         id: changed-files
         uses: tj-actions/changed-files@v43
+        with:
+          files: |
+            docker-compose:
+              - docker-compose.yml
+              - docker-compose.yaml
       - name: Print changes
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
