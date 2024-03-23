@@ -1,5 +1,4 @@
 import sys
-import subprocess
 
 if __name__ == "__main__":
     raise ValueError("Error with value error")
