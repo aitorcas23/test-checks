@@ -17,8 +17,8 @@ jobs:
         with:
           since_last_remote_commit: true
           files: |
-            **/docker-compose.yml
-            **/docker-compose.yaml
+            docker-compose.yml
+            docker-compose.yaml
       - name: Print changes
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
