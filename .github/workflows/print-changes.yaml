@@ -1,7 +1,7 @@
 name: Print changes
 
 on:
-  push:
+  pull_request:
 
 jobs:
   print-changes:
@@ -12,6 +12,7 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v43
         with:
+          since_last_remote_commit: true
           files: |
             docker-compose.yml
             docker-compose.yaml
