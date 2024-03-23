@@ -1,0 +1,19 @@
+name: Print changes
+
+on:
+  push:
+
+jobs:
+  print-changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Track changes
+        uses: tj-actions/changed-files@v43
+      - name: Print changes
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
+          done
+

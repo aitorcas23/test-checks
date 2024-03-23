@@ -1,7 +1,4 @@
-import sys
-import subprocess
-
 if __name__ == "__main__":
-    print("Error message mereketengue")
-    sys.exit(1)
-    # print("Hola")
+    # print("::warning file=main.py,line=5,title=Warning title::Send warning from python script")
+    # raise ValueError("Error with value error")
+    print("Hello github action")
